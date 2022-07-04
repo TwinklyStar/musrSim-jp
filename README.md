@@ -1,6 +1,7 @@
 
-# musrsim-sms
-Geant4 package for musrSim (shanghai muon source dedicated)
+# musrsim-jp
+Geant4 package for musrSim (Zhi Yuan J-PARC project dedicated)
+It is transferred from musrsim-sms (Shanghai Muon Source dedicated)
 
 # Notice
 This branch is especially created for surface muon research.
