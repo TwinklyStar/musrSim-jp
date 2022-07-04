@@ -75,6 +75,9 @@
 #include "musrErrorMessage.hh"
 #include "musrSteppingAction.hh"
 
+// Enable conversion from CAD to Geant4 Geometry
+#include "CADMesh.hh"
+
 using namespace std;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -223,7 +226,17 @@ G4VPhysicalVolume* musrDetectorConstruction::Construct()  {
 	int  volumeID=0;
 	char actualFieldName[100]="nofield";
 
-	if (strcmp(tmpString2,"tubs")==0){
+    // Get geometry from stl file
+    if (strcmp(tmpString2, "stl")==0){
+        char stl_file[100];
+        sscanf(&line[0], "%*s %*s %*s %s %s %s %lf %lf %lf %s %s %s %d %s",
+               name, stl_file, material, &posx, &posy, &posz, mothersName, rotMatrix, sensitiveDet, &volumeID, actualFieldName);
+        auto mesh = CADMesh::TessellatedMesh::FromSTL(stl_file);
+        solidName += name;
+        solid = mesh->GetSolid();
+    }
+
+	else if (strcmp(tmpString2,"tubs")==0){
 	  sscanf(&line[0],"%*s %*s %*s %s %lf %lf %lf %lf %lf %s %lf %lf %lf %s %s",
 		 name,&x1,&x2,&x3,&x4,&x5,material,&posx,&posy,&posz,mothersName,rotMatrix);
 	  sscanf(&line[0],"%*s %*s %*s %*s %*g %*g %*g %*g %*g %*s %*g %*g %*g %*s %*s %s %d %s",sensitiveDet,&volumeID,actualFieldName);

@@ -17,8 +17,8 @@ source  /cvmfs/sft.cern.ch/lcg/views/LCG_101/x86_64-centos7-gcc11-opt/setup.sh
 ### Download and compile the package
 
 ```
-git clone https://github.com/kimsiang/musrsim-sms.git
-cd musrsim-sms
+git clone https://github.com/TwinklyStar/musrSim-jp.git
+cd musrSim-jp
 mkdir build
 cd build
 make -j4
@@ -33,7 +33,7 @@ cp ../../run/1000_Laser.mac ../../run/visVRML.mac .
 ### Start simulation
 
 ```
-../musrsim 1000_Laser.mac test_run
+../musrSim_jp 1000_Laser.mac test_run
 ```
 ### Run on condor
 First copy condor scripts
@@ -54,7 +54,7 @@ With `randomOption=1`, Geant4 will take the current system time as the random se
 Example:
 ```
 # Set the offset as input parameter
-../musrSim 1003.mac name 10
+../musrSim_jp 1003.mac name 10
 
 # Set the offest in macro file
 /musr/command SetRndSeedOffset 10
@@ -91,7 +91,7 @@ Example:
 
 Now can specify a name when launch the job:
 ```
-../musrSim 1003.mac name
+../musrSim_jp 1003.mac name
 ```
 The output file will be `musr_1003_name.root`.
 
@@ -130,11 +130,19 @@ You can turn it off by adding following command in `.mac` file:
 /musr/command rootOutput det_VrtxPrtTrackID off
 ```
 
-### 2020-6-26 (ML)
+### 2022-6-26 (ML)
 Add customization of ElectroNuclear cross section factor in `.mac` file.\
 Default value is 1.0\
 For example:
 ```
 # set electronuclear cross section factor to 1000
 /musr/command G4EmExtraPhysics SetCrossSecFactor enFactor 1000.0
+```
+
+### 2022-7-4 (ML)
+Enable importing geometry from `.stl` file in `.mac`.\
+Example:
+```
+#parameter guide            name  input file  material  x y z   mother      rotation      det#
+/musr/command construct stl Struc bunny.stl   G4_W      0 0 0   log_World   norot    dead 102
 ```
