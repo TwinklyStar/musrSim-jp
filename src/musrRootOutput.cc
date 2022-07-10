@@ -207,10 +207,10 @@ void musrRootOutput::BeginOfRunAction() {
     char RootOutputFileName[200];
     //  sprintf(RootOutputFileName, "data/musr_%i.root", tmpRunNr);
     if(run_name!="") {
-        sprintf(RootOutputFileName, "%s/musrSim_%i_%s.root",rootOutputDirectoryName,tmpRunNr,run_name.c_str());
+        sprintf(RootOutputFileName, "%s/musrSim_jp%03d_%s.root",rootOutputDirectoryName,tmpRunNr,run_name.c_str());
     }
     else {
-        sprintf(RootOutputFileName, "%s/musrSim_%i.root",rootOutputDirectoryName,tmpRunNr);
+        sprintf(RootOutputFileName, "%s/musrSim_jp%03d.root",rootOutputDirectoryName,tmpRunNr);
     }
 
     rootFile=new TFile(RootOutputFileName,"recreate");

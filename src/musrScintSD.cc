@@ -470,7 +470,7 @@ void musrScintSD::EndOfEvent(G4HCofThisEvent*) {
                 if ( nSignals >= (det_IDmax-1) ) {
                     char message[200];
                     sprintf(message,"musrScintSD.cc::EndOfEvent(): number of signals exceeds maximal allowed value.");
-                    musrErrorMessage::GetInstance()->musrError(WARNING,message,true);
+                    musrErrorMessage::GetInstance()->musrError(SERIOUS,message,true);
                 }
                 else {
                     det_edep[nSignals]                  = aHit->GetEdep();
