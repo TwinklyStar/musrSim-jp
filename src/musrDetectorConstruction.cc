@@ -82,13 +82,14 @@ using namespace std;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-musrDetectorConstruction::musrDetectorConstruction(G4String steeringFileName,int random_seed_offset)
+musrDetectorConstruction::musrDetectorConstruction(G4String steeringFileName,int random_seed_offset, int random_seed)
 :checkOverlap(true), aScintSD(0)
 {  
   parameterFileName = steeringFileName;
   DefineMaterials();
   detectorMessenger = new musrDetectorMessenger(this);
   detectorMessenger->SetRandomSeedOffset(random_seed_offset);
+  detectorMessenger->SetRandomSeed(random_seed);
 
 }
 
@@ -1577,6 +1578,7 @@ G4VPhysicalVolume* musrDetectorConstruction::Construct()  {
       else if (strcmp(tmpString1,"G4EmExtraPhysics")==0){}
       else if (strcmp(tmpString1, "SetOutputFileName") == 0) {} // Exception for setting file name command
       else if (strcmp(tmpString1, "SetRndSeedOffset") == 0) {} // Exception for setting random seed offset
+      else if (strcmp(tmpString1, "SetRndSeed") == 0) {} // Exception for setting random seed
 
       else {ReportGeometryProblem(line);}
       

@@ -75,6 +75,7 @@ int main(int argc,char** argv) {
     // Create Root class for storing the oMuMu Filterutput of the Geant simulation
     std::string name = "";
     int random_seed_offset = 0;
+    int random_seed = 0;
 
     if(argc > 2) {
         name = std::string(argv[2]);
@@ -99,6 +100,10 @@ int main(int argc,char** argv) {
                     name = cmd3;
                     std::cout << "\nmusrSim.cc: Set output ROOT file: " << "data/musrSim_jp" << output_num << "_" << cmd3 << ".root\n" << std::endl;
                 }
+            }
+            else if (!cmd1.compare("/musr/command") && !cmd2.compare("SetRndSeed")){
+                random_seed = atoi(cmd3.c_str());
+                std::cout << "musrSim.cc: Set random seed : " << random_seed << std::endl;
             }
             // Set random seed in macro file
             if (!(argc >3) && !cmd1.compare("/musr/command") && !cmd2.compare("SetRndSeedOffset")){
@@ -129,7 +134,7 @@ int main(int argc,char** argv) {
         if (myRunNr>0)  {runManager->SetRunIDCounter(myRunNr);}
         //    musrdetector->SetInputParameterFileName(argv[1]);
     }
-    musrDetectorConstruction* musrdetector = new musrDetectorConstruction(steeringFileName,random_seed_offset);
+    musrDetectorConstruction* musrdetector = new musrDetectorConstruction(steeringFileName,random_seed_offset, random_seed);
     runManager->SetUserInitialization(musrdetector);
     //runManager->SetUserInitialization(new musrPhysicsList);
     runManager->SetUserInitialization(new FTFP_BERT(1,steeringFileName));

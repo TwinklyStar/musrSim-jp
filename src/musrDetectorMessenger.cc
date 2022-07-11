@@ -47,6 +47,10 @@ void musrDetectorMessenger::SetRandomSeedOffset(int offset) {
     random_seed_offset= offset;
 }
 
+void musrDetectorMessenger::SetRandomSeed(int seed) {
+    random_seed = seed;
+}
+
 musrDetectorMessenger::musrDetectorMessenger(musrDetectorConstruction* myDet)
         :myDetector(myDet)
 {
@@ -76,6 +80,7 @@ musrDetectorMessenger::musrDetectorMessenger(musrDetectorConstruction* myDet)
     RandomOptionCmd->SetGuidance("   2 ... use event number to initialise at the beginning of each event");
     RandomOptionCmd->SetGuidance("   3 ... read in the random no. initial values for each event from a file");
     RandomOptionCmd->SetGuidance("   4 ... read in the random no. initial values for each event from the file kamil.rndm");
+    RandomOptionCmd->SetGuidance("   5 ... read in the random no. initial values for each event from the .mac file");
     RandomOptionCmd->SetParameterName("randomOpt",false);
     RandomOptionCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
 
@@ -189,6 +194,15 @@ void musrDetectorMessenger::SetNewValue(G4UIcommand* command,G4String newValue) 
             G4cout << "*** Random Seed set from kamil.rndm file  ***" << G4endl;
             G4cout << "*********************************************" << G4endl;
             musrPrimaryGeneratorAction::setRandomNrSeedFromFile_RNDM=1;
+        }
+        else if (RandomOption == 5) {
+            G4cout << "*********************************************" << G4endl;
+            G4cout << "****** Random Seed set from .mac file  ******" << G4endl;
+            G4cout << "*********************************************" << G4endl;
+            G4cout << "seed: " << random_seed << G4endl;
+
+            CLHEP::HepRandom::setTheSeed(random_seed);
+            CLHEP::RandGauss::setFlag(false);
         }
     }
     if ( command == HowOftenToPrintEventCmd )

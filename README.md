@@ -146,3 +146,14 @@ Example:
 #parameter guide            name  input file  material  x y z   mother      rotation      det#
 /musr/command construct stl Struc bunny.stl   G4_W      0 0 0   log_World   norot    dead 102
 ```
+
+### 2022-7-11 (ML)
+Enable setting random seed from `.mac` file, if random option is set as `5`.\
+Example:
+```
+# Random seed option
+/musr/run/randomOption 5
+
+# Set random seed as 9999999
+/musr/command SetRndSeed 9999999
+```
