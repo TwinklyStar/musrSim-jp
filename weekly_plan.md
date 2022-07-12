@@ -2,6 +2,7 @@
 
 ## 7.12 - 7.18
 ### Meng
+- [x] Create a j-box folder to share programme, data and report slides
 - [x] Enable the customization of random seed
 - [ ] Search for an optimized target size that will generate more decay events for 50 MeV $\mu^+$
 - [ ] Find the distribution of $mu^+$ decay position and angular distribution of generated $e^+$
