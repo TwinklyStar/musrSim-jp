@@ -1,6 +1,6 @@
 #include "musrDetectorConstruction.hh"
 #include "musrPhysicsList.hh"
-#include "FTFP_BERT.hh"
+//#include "FTFP_BERT.hh"
 #include "musrPrimaryGeneratorAction.hh"
 #include "musrRunAction.hh"
 #include "musrEventAction.hh"
@@ -136,8 +136,8 @@ int main(int argc,char** argv) {
     }
     musrDetectorConstruction* musrdetector = new musrDetectorConstruction(steeringFileName,random_seed_offset, random_seed);
     runManager->SetUserInitialization(musrdetector);
-    //runManager->SetUserInitialization(new musrPhysicsList);
-    runManager->SetUserInitialization(new FTFP_BERT(1,steeringFileName));
+    runManager->SetUserInitialization(new musrPhysicsList);
+//    runManager->SetUserInitialization(new FTFP_BERT(1,steeringFileName));
 
 #ifdef G4VIS_USE
     // Visualization, if you choose to have it!
