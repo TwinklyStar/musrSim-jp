@@ -21,6 +21,7 @@ git clone https://github.com/TwinklyStar/musrSim-jp.git
 cd musrSim-jp
 mkdir build
 cd build
+cmake ../
 make -j4
 ```
 ### Create working directory
