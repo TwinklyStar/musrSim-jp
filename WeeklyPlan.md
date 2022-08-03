@@ -15,10 +15,28 @@
 
 ## 7.19 - 7.25
 ### Meng
-- [ ] Find out the influence of a metal box on the $e^+$ track
+- [ ] Cosmic muon production
+- [x] Paper reading
 
 ### Xin tong
-- [ ] ...
+- [x] Analysis algorithm debug
+- [ ] Calibration of different polarization
+- [ ] Use distributed muon, comparing the result with non-distributed one
 
 ### Fang yuan
-- [ ] ...
+- [ ] Study targets' ability to stop muon with different muon
+
+## 8.3-8.9
+### Meng
+- [ ] Cosmic muon production in musrSim
+
+### Xin tong
+- [ ] Use det_time to find the time interval of two hits that are caused by the same positron in the same detector
+- [ ] Add det_time cut, to reduce those vector.size>3 to 3 (Only 1 hit in each detector)
+- [ ] Evaluate e+ capture ratio based on above improvements
+
+### Fang yuan
+- [ ] Refer to [Phys. Rev. 122, 1883](https://journals.aps.org/pr/abstract/10.1103/PhysRev.122.1883). Use same Lead and Cu absorber to stop muon. Validate its conclusion (momentum should > 540 MeV/c)
+
+### Si yuan
+- [ ] Continue studying the angular distribution of e+ decayed from thermal muon
