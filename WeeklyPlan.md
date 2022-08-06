@@ -28,7 +28,7 @@
 
 ## 8.3-8.9
 ### Meng
-- [ ] Cosmic muon production in musrSim
+- [x] Cosmic muon production in musrSim
 
 ### Xin tong
 - [ ] Use det_time to find the time interval of two hits that are caused by the same positron in the same detector
