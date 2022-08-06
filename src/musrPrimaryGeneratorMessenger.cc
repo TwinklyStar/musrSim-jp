@@ -95,6 +95,10 @@ musrPrimaryGeneratorMessenger::musrPrimaryGeneratorMessenger(musrPrimaryGenerato
   setMomentumCmd->SetParameterName("mes_p0",true);
   setMomentumCmd->SetDefaultUnit("MeV");
 
+  setCosmicMuonCmd = new G4UIcmdWithABool("/gun/cosmic", this);
+  setCosmicMuonCmd->SetGuidance(" Use cosmic muon energy distribution to initial particles");
+  setCosmicMuonCmd->SetParameterName("mes_ifcosmic", true);
+
   setMomentumSmearingCmd = new G4UIcmdWithADoubleAndUnit("/gun/momentumsmearing",this);
   setMomentumSmearingCmd->SetGuidance(" Set sigma of the momentum of the generated muons (with unit)");
   setMomentumSmearingCmd->SetParameterName("mes_pSigma",true);
@@ -201,6 +205,9 @@ musrPrimaryGeneratorMessenger::~musrPrimaryGeneratorMessenger()
   delete setboxBoundaryCmd;       //P.B. 15 Dec 2009
   delete setKEnergyCmd;
   delete setMomentumCmd;
+
+  delete setCosmicMuonCmd;
+
   delete setMomentumSmearingCmd;
   delete setMomentumBoundaryCmd;
   delete setTiltAngleCmd;
@@ -246,6 +253,10 @@ void musrPrimaryGeneratorMessenger::SetNewValue(G4UIcommand * command,G4String n
    { musrAction->SetKEnergy(setKEnergyCmd->GetNewDoubleValue(newValue));}
   if( command == setMomentumCmd)
    { musrAction->SetMomentum(setMomentumCmd->GetNewDoubleValue(newValue));}
+
+  if(command == setCosmicMuonCmd)
+  { musrAction->SetIfCosmic(setCosmicMuonCmd->GetNewBoolValue(newValue));}
+
   if( command == setMomentumSmearingCmd)
     { musrAction->SetMomentumSmearing(setMomentumSmearingCmd->GetNewDoubleValue(newValue));}
   if( command == setMomentumBoundaryCmd)

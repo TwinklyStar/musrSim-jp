@@ -158,3 +158,15 @@ Example:
 # Set random seed as 9999999
 /musr/command SetRndSeed 9999999
 ```
+
+### 2022-8-6 (ML)
+Add cosmic muon energy distribution. You can turn it on/off in `.mac` file:
+Example：
+```
+# Turn on cosmic muon distribution
+/gun/cosmic true
+
+# Turn off cosmic muon distribution
+/gun/cosmic false
+```
+Once being turned on, it will overwrite all other settings for momentum and kinetic energy in `.mac` file.

@@ -29,6 +29,7 @@
 #include "Randomize.hh"
 #include "G4ThreeVector.hh"
 #include "G4ParticleDefinition.hh"
+#include "cosmicMuonManager.h"
 #include <stdio.h>
 #include <vector>
 
@@ -60,6 +61,7 @@ class musrPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     void SetMuonTimeSigma(G4double val)     {tSigma=val;} //P.B. 13 May 2009
     void SetKEnergy(G4double val);
     void SetMomentum(G4double val)          {p0=val;}
+    void SetIfCosmic(G4bool val)            {if_cosmic = val;}
     void SetMomentumSmearing(G4double val)  {pSigma=val;}
     void SetMomentumBoundary(G4ThreeVector v){pMinAllowed=v[0]; pMaxAllowed=v[1];}
     void SetTilt(G4ThreeVector v)           {xangle0=v[0]; yangle0=v[1];}
@@ -111,6 +113,8 @@ class musrPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     G4double xMaxSource0, yMaxSource0, zMaxSource0;      //P.B. 15 Dec 2009
     G4double xMaxSource, yMaxSource, zMaxSource;         //P.B. 15 Dec 2009
     G4double p0, pSigma, pMinAllowed, pMaxAllowed;
+    G4bool   if_cosmic;     // Meng Lv Aug 5 2022
+    G4double E_tot;
     G4double xangle0, yangle0, xangleSigma, yangleSigma, zangleSigma,pitch;
     G4bool   UnpolarisedMuonBeam, TransversalyUnpolarisedMuonBeam;
     G4double xPolarisIni, yPolarisIni, zPolarisIni;

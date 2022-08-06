@@ -26,6 +26,7 @@
 
 #include "G4UImessenger.hh"
 #include "globals.hh"
+#include "G4UIcmdWithABool.hh"
 
 class musrPrimaryGeneratorAction;
 class G4UIcmdWithAString;
@@ -59,6 +60,9 @@ class musrPrimaryGeneratorMessenger: public G4UImessenger
     G4UIcmdWith3VectorAndUnit* setboxBoundaryCentreCmd;   //P.B. 15 Dec 2009
     G4UIcmdWithADoubleAndUnit* setKEnergyCmd;
     G4UIcmdWithADoubleAndUnit* setMomentumCmd;
+
+    G4UIcmdWithABool*          setCosmicMuonCmd;        // Add by Meng Lv to introduce cosmic muon energy distribution. Aug 5 2022
+
     G4UIcmdWithADoubleAndUnit* setMomentumSmearingCmd;
     G4UIcmdWith3VectorAndUnit* setMomentumBoundaryCmd;
     G4UIcmdWith3VectorAndUnit* setTiltAngleCmd;
