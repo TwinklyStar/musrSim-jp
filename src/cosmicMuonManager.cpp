@@ -20,7 +20,7 @@ G4double cosmicMuonManager::GetRndCosmicMuonEnergy(G4double theta) {
         1 + P_1*P_1 + P_2 + P_4);
 
     double E=0.;
-    if (uni_var <= 0.7879){
+    if (uni_var <= 0.7937){
         E = 5.8658*pow(uni_var,5) + 3.2157*pow(uni_var,4) - 2.3057*pow(uni_var,3) + 2.1921*pow(uni_var, 2) + 2.1139*uni_var + 0.0108;
     }
     else if (uni_var <= 0.9685){
