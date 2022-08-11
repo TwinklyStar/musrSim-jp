@@ -20,7 +20,7 @@ G4double cosmicMuonManager::GetRndCosmicMuonEnergy(G4double theta) {
     G4double num = cos_theta*cos_theta + P_1*P_1 + P_2*std::pow(cos_theta, P_3) + P_4*std::pow(cos_theta, P_5);
     G4double den = 1 + P_1*P_1 + P_2 + P_4;
     G4double cos_theta_star = std::sqrt(num/den);
-    std::cout << cos_theta_star << std::endl;
+//    std::cout << cos_theta_star << std::endl;
 
 //    double E=0.;
 //    if (uni_var <= 0.7937){
