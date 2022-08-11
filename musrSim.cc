@@ -66,8 +66,6 @@ int main(int argc,char** argv) {
     // Run manager
     G4RunManager * runManager = new G4RunManager;
 
-    // cosmic muon manager
-    cosmicMuonManager* mycosmicManager = new cosmicMuonManager();
 
     // Create class "myParameters", which is a collection of many different parameters
     G4String steeringFileName=argv[1];
@@ -208,7 +206,6 @@ int main(int argc,char** argv) {
 #ifdef G4VIS_USE
     delete visManager;
 #endif
-    delete mycosmicManager;
     delete myRootOutput;
     delete myErrorMessage;
     delete myParameters;

@@ -7,6 +7,9 @@
 
 #include "globals.hh"
 #include "Randomize.hh"
+#include "TMath.h"
+#include "TRandom.h"
+#include "TF1.h"
 
 class cosmicMuonManager {
 public:
@@ -16,7 +19,8 @@ public:
     static cosmicMuonManager& GetInstance();    // Meyers’ Singleton
     G4double GetRndCosmicMuonEnergy(G4double theta);
 
-
+private:
+    TF1 cosmicPDF;
 
 };
 
