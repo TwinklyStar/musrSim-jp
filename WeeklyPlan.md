@@ -36,10 +36,10 @@
 - [x] Use det_time to find the time interval of two hits that are caused by the same positron in the same detector
 - [x] Add det_time cut, to reduce those vector.size>3 to 3 (Only 1 hit in each detector)
 - [ ] Evaluate e+ capture ratio based on above improvements
-- [ ] Add separation time to reduce repeating hits
+- [x] Add separation time to reduce repeating hits
 
 ### Fang yuan
-- [ ] Refer to [Phys. Rev. 122, 1883](https://journals.aps.org/pr/abstract/10.1103/PhysRev.122.1883). Use same Lead and Cu absorber to stop muon. Validate its conclusion (momentum should > 540 MeV/c)
+- [x] Refer to [Phys. Rev. 122, 1883](https://journals.aps.org/pr/abstract/10.1103/PhysRev.122.1883). Use same Lead and Cu absorber to stop muon. Validate its conclusion (momentum should > 540 MeV/c)
 
 ### Si yuan
 - [x] Continue studying the angular distribution of e+ decayed from thermal muon
