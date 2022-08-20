@@ -38,12 +38,23 @@
 - [ ] Evaluate e+ capture ratio based on above improvements
 - [x] Add separation time to reduce repeating hits
 
+### Group meeting indico page
+```
+https://indico-tdli.sjtu.edu.cn/event/1225/
+https://indico-tdli.sjtu.edu.cn/event/1232/
+```
+
 ### Fang yuan
 - [x] Refer to [Phys. Rev. 122, 1883](https://journals.aps.org/pr/abstract/10.1103/PhysRev.122.1883). Use same Lead and Cu absorber to stop muon. Validate its conclusion (momentum should > 540 MeV/c)
 
 ### Si yuan
 - [x] Continue studying the angular distribution of e+ decayed from thermal muon
 - [x] Compare e+ angular distribution with shell and without shell
+
+### Group meeting indico page
+```
+https://indico-tdli.sjtu.edu.cn/event/1242/
+```
 
 ## 8.17-8.29(Group presentation)
 ### Meng
