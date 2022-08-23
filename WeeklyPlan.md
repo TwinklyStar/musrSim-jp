@@ -56,25 +56,49 @@ https://indico-tdli.sjtu.edu.cn/event/1232/
 https://indico-tdli.sjtu.edu.cn/event/1242/
 ```
 
-## 8.17-8.29(Group presentation)
+## 8.17-8.23(Group presentation)
 ### Meng
-- [ ] Apply new size to the new detector structure
-- [ ] Change shell material to Al
-- [ ] Apply filter+absorber structure to new detector structure
+- [x] Apply new size to the new detector structure
+- [x] Change shell material to Al
+- [x] Apply filter+absorber structure to new detector structure
 - [ ] Compare detector outcome of Cu absorber and Fe absorber
 
 ### Xin tong
-- [ ] Apply new size to the 3-layer detector structure and evaluate its performance
-- [ ] Develop and optimize polarization detecting algorithm
-- [ ] Compare detector outcome of Cu absorber and Fe absorber
-- [ ] Evaluate performance with shell and without shell
+- [x] Simplify the shell with solidworks
+- [x] Apply new size to the 3-layer detector structure and evaluate its performance
+- [x] Develop and optimize polarization detecting algorithm
+- [x] Evaluate performance with shell and without shell
 
 ### Fang yuan
-- [ ] Study the influence of the shell to energy filter range
-- [ ] Use AB$\bar{C}$ detector signal to judge whether muon decays in absorber
-- [ ] Study the time interval between AB$\bar{C}$ signal and muon decay time
-- [ ] Compare energy range with Cu absorber and Fe absorber
+- [x] Study the influence of the shell to energy filter range
+- [x] Use AB$\bar{C}$ detector signal to judge whether muon decays in absorber
+- [x] Study the time interval between AB$\bar{C}$ signal and muon decay time
+- [x] Compare energy range with Cu absorber and Fe absorber
 
 ### Si yuan
-- [ ] Change shell material to Al and study its angular distribution again
-- [ ] Compare distribution without shell to theoretical distribution
+- [x] Change shell material to Al and study its angular distribution again
+- [x] Compare distribution without shell to theoretical distribution
+
+### Group meeting indico page
+```
+https://indico-tdli.sjtu.edu.cn/event/1249/
+```
+
+## 8.24-8.30
+### Meng
+- [ ] Add coincidence to cosmic detector
+- [ ] Prepare SJTU-KEK workshop presentation slide
+
+### Xin tong
+- [ ] Continue simplifing the shell (add inner ring)
+- [ ] Adjust scintillator thickness to 1cm (the actual thickness we'll use)
+- [ ] Evaluate 3-layer detector performance with the simplified shell
+
+### Fang yuan
+- [ ] Remove the shell
+- [ ] Optimize the thickness of lead filter for a better yield
+- [ ] Evaluate the accuracy of (anti)coincidence detector when judging whether mu+ decay in absorber
+
+### Si yuan
+- [ ] Plot the energy and asymmetry figure in paper
+- [ ] Compare e+ decay angular distribution of mu+ decay in Cu absorber and Fe absorber
