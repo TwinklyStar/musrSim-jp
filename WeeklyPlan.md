@@ -90,9 +90,9 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 - [ ] Prepare SJTU-KEK workshop presentation slide
 
 ### Xin tong
-- [ ] Continue simplifing the shell (add inner ring)
+- [ ] Continue simplifying the shell (add inner ring)
 - [ ] Adjust scintillator thickness to 1cm (the actual thickness we'll use)
-- [ ] Evaluate 3-layer detector performance with the simplified shell
+- [ ] Evaluate 3-layer detector performance with the simplified shell in thermal muon
 
 ### Fang yuan
 - [ ] Remove the shell
@@ -102,3 +102,6 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 ### Si yuan
 - [ ] Plot the energy and asymmetry figure in paper
 - [ ] Compare e+ decay angular distribution of mu+ decay in Cu absorber and Fe absorber
+
+## Future work reminder
+- [ ] Create a process that convert surface muon into thermal muon
