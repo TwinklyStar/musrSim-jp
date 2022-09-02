@@ -86,22 +86,41 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 
 ## 8.24-8.30
 ### Meng
-- [ ] Add coincidence to cosmic detector
-- [ ] Prepare SJTU-KEK workshop presentation slide
+- [x] Add coincidence to cosmic detector
+- [x] Prepare SJTU-KEK workshop presentation slide
 
 ### Xin tong
-- [ ] Continue simplifying the shell (add inner ring)
-- [ ] Adjust scintillator thickness to 1cm (the actual thickness we'll use)
-- [ ] Evaluate 3-layer detector performance with the simplified shell in thermal muon
+- [x] Continue simplifying the shell (add inner ring)
+- [x] Adjust scintillator thickness to 1cm (the actual thickness we'll use)
+- [x] Evaluate 3-layer detector performance with the simplified shell in thermal muon
 
 ### Fang yuan
-- [ ] Remove the shell
-- [ ] Optimize the thickness of lead filter for a better yield
-- [ ] Evaluate the accuracy of (anti)coincidence detector when judging whether mu+ decay in absorber
+- [x] Remove the shell
+- [ ] Optimize the thickness of lead filter for a better yield (on hold)
+- [x] Evaluate the accuracy of (anti)coincidence detector when judging whether mu+ decay in absorber
 
 ### Si yuan
-- [ ] Plot the energy and asymmetry figure in paper
-- [ ] Compare e+ decay angular distribution of mu+ decay in Cu absorber and Fe absorber
+- [x] Plot the energy and asymmetry figure in paper
+- [x] Compare e+ decay angular distribution of mu+ decay in Cu absorber and Fe absorber
 
+
+## 8.31-9.5
+### Meng
+- [ ] Optimize the performance of cosmic detector
+
+### Xin tong
+- [ ] Expand the size of detector until it can detect the polarization of thermal muon
+- [ ] Cut the central part to save the cost, and re-evaluate its performance
+
+### Fang yuan
+- [ ] Improve the coincidence detector algorithm:
+  - [ ] Detector thickness: 1 cm
+  - [ ] Use edep instead of mup_edep
+  - [ ] Optimize the algorithm for a better performance
+
+### Si yuan
+- [ ] Study the angular distribution of e+ with the defeatured shell
+- [ ] Study the angular distribution of e+ decayed from cosmic model
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
+- [ ] Add depolarization physic process
