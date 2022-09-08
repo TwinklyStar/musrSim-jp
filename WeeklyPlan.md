@@ -140,6 +140,11 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 - [ ] Fix the problem of cosmic muon angular distribution
 - [ ] Complete the plot of A-$\epsilon$ of muon decay
 
+### Group meeting indico page
+```
+https://indico-tdli.sjtu.edu.cn/event/1270/
+```
+
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
 - [ ] Add depolarization physic process
