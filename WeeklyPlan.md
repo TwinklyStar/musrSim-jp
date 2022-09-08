@@ -121,9 +121,6 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 ### Si yuan
 - [x] Study the angular distribution of e+ with the defeatured shell
 - [x] Study the angular distribution of e+ decayed from cosmic model
-## Future work reminder
-- [ ] Create a process that convert surface muon into thermal muon
-- [ ] Add depolarization physic process
 
 ## 9.6-9.12
 ### Meng
@@ -142,3 +139,7 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 ### Si yuan 
 - [ ] Fix the problem of cosmic muon angular distribution
 - [ ] Complete the plot of A-$\epsilon$ of muon decay
+
+## Future work reminder
+- [ ] Create a process that convert surface muon into thermal muon
+- [ ] Add depolarization physic process
