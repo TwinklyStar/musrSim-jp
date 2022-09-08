@@ -106,7 +106,7 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 
 ## 8.31-9.5
 ### Meng
-- [ ] Optimize the performance of cosmic detector
+- [x] Optimize the performance of cosmic detector
 
 ### Xin tong
 - [ ] Expand the size of detector until it can detect the polarization of thermal muon
@@ -114,13 +114,31 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 
 ### Fang yuan
 - [ ] Improve the coincidence detector algorithm:
-  - [ ] Detector thickness: 1 cm
+  - [x] Detector thickness: 1 cm
   - [ ] Use edep instead of mup_edep
   - [ ] Optimize the algorithm for a better performance
 
 ### Si yuan
-- [ ] Study the angular distribution of e+ with the defeatured shell
-- [ ] Study the angular distribution of e+ decayed from cosmic model
+- [x] Study the angular distribution of e+ with the defeatured shell
+- [x] Study the angular distribution of e+ decayed from cosmic model
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
 - [ ] Add depolarization physic process
+
+## 9.6-9.12
+### Meng
+- [ ] Develop selection during simulation
+- [ ] Test cosmic performance in 5 different polarization values with 10^8 events
+- [ ] Help Si yuan to solve abnormal cosmic angular distribution
+
+### Xin tong
+- [ ] Expand the size of detector until it can detect the polarization of thermal muon
+- [ ] Cut the central part to save the cost, and re-evaluate its performance
+
+### Fang yuan
+- [ ] Remove the filter
+- [ ] Study the function of mu+ decay number and Cu thickness, e+ absorb ratio and Cu thickness
+
+### Si yuan 
+- [ ] Fix the problem of cosmic muon angular distribution
+- [ ] Complete the plot of A-$\epsilon$ of muon decay
