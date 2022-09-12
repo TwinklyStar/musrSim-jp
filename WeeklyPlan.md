@@ -122,6 +122,11 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 - [x] Study the angular distribution of e+ with the defeatured shell
 - [x] Study the angular distribution of e+ decayed from cosmic model
 
+### Group meeting indico page
+```
+https://indico-tdli.sjtu.edu.cn/event/1270/
+```
+
 ## 9.6-9.12
 ### Meng
 - [ ] Develop selection during simulation
@@ -139,11 +144,6 @@ https://indico-tdli.sjtu.edu.cn/event/1249/
 ### Si yuan 
 - [ ] Fix the problem of cosmic muon angular distribution
 - [ ] Complete the plot of A-$\epsilon$ of muon decay
-
-### Group meeting indico page
-```
-https://indico-tdli.sjtu.edu.cn/event/1270/
-```
 
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
