@@ -129,21 +129,36 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 
 ## 9.6-9.12
 ### Meng
-- [ ] Develop selection during simulation
-- [ ] Test cosmic performance in 5 different polarization values with 10^8 events
-- [ ] Help Si yuan to solve abnormal cosmic angular distribution
+- [x] Develop selection during simulation
+- [x] Test cosmic performance in 5 different polarization values with 10^8 events
+- [x] Help Si yuan to solve abnormal cosmic angular distribution
 
 ### Xin tong
-- [ ] Expand the size of detector until it can detect the polarization of thermal muon
-- [ ] Cut the central part to save the cost, and re-evaluate its performance
+- [x] Expand the size of detector until it can detect the polarization of thermal muon
+- [x] Cut the central part to save the cost, and re-evaluate its performance
 
 ### Fang yuan
-- [ ] Remove the filter
+- [x] Remove the filter
 - [ ] Study the function of mu+ decay number and Cu thickness, e+ absorb ratio and Cu thickness
 
 ### Si yuan 
-- [ ] Fix the problem of cosmic muon angular distribution
+- [x] Fix the problem of cosmic muon angular distribution
 - [ ] Complete the plot of A-$\epsilon$ of muon decay
+
+
+## 10.1-10.13
+### Meng
+- [ ] Compare the polarization measurement of corner structure and classic structure
+- [ ] Figure out the plan for hardware stage
+
+### Xin tong & Si yuan
+- [ ] Further search of the parallel detector
+- [ ] Position reconstruction
+
+### Fang yuan
+- [ ] Study the effect of absorber thickness to 4-corner detector's polarization detecting sensitivity 
+- [ ] Optimize the coincidence detector (detect muon using det_edep)
+
 
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
