@@ -149,16 +149,31 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 ## 10.1-10.13
 ### Meng
 - [ ] Compare the polarization measurement of corner structure and classic structure
-- [ ] Figure out the plan for hardware stage
+- [x] Figure out the plan for hardware stage
 
 ### Xin tong & Si yuan
-- [ ] Further search of the parallel detector
-- [ ] Position reconstruction
+- [x] Further search of the parallel detector
+- [x] Position reconstruction
 
 ### Fang yuan
-- [ ] Study the effect of absorber thickness to 4-corner detector's polarization detecting sensitivity 
-- [ ] Optimize the coincidence detector (detect muon using det_edep)
+- [x] Study the effect of absorber thickness to 4-corner detector's polarization detecting sensitivity 
+- [x] Optimize the coincidence detector (detect muon using det_edep)
 
+## 10.14-10.20
+### Meng
+- [ ] Add cosmic muon polarization distribution and angular distribution
+
+### Xin tong
+- [ ] Complete the position recostruction without shell
+- [ ] Evaluate the influence of shell on e+ reconstruction
+
+### Fang yuan
+- [ ] Study the effect of absorber thickness to 4-corner detector's polarization detecting sensitivity
+- [ ] Figure out the best absorber thickness
+
+### Si yuan
+- [ ] Study the angular distribution with regard to absorber thickness
+- [ ] Help Xintong to build position reconstruction
 
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
