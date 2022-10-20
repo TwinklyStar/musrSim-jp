@@ -10,6 +10,7 @@
 #include "TMath.h"
 #include "TRandom.h"
 #include "TF1.h"
+#include "TF2.h"
 
 class cosmicMuonManager {
 public:
@@ -18,9 +19,12 @@ public:
 
     static cosmicMuonManager& GetInstance();    // Meyers’ Singleton
     G4double GetRndCosmicMuonEnergy(G4double theta);
+    void GetRndCosmicMuonEnergyAndAngle(G4double &E, G4double &theta, G4double &phi);
+    TRandom rndManager;
 
 private:
-    TF1 cosmicPDF;
+    TF1 cosmicEPDF;
+    TF2 cosmicEAPDF;
 
 };
 

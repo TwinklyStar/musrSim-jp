@@ -114,6 +114,7 @@ class musrPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     G4double xMaxSource, yMaxSource, zMaxSource;         //P.B. 15 Dec 2009
     G4double p0, pSigma, pMinAllowed, pMaxAllowed;
     G4bool   if_cosmic;     // Meng Lv Aug 5 2022
+    G4double theta, phi;    // Meng Lv Oct 20 2022
     G4double E_tot;
     G4double xangle0, yangle0, xangleSigma, yangleSigma, zangleSigma,pitch;
     G4bool   UnpolarisedMuonBeam, TransversalyUnpolarisedMuonBeam;

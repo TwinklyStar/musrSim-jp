@@ -4,7 +4,9 @@
 
 #include "cosmicMuonManager.h"
 
-cosmicMuonManager::cosmicMuonManager(): cosmicPDF("cosmicPDF", "pow(x+3.64/pow([0], 1.29), -2.7) * (1/(1+1.1*x*[0]/115) + 0.054/(1+1.1*x*[0]/850))", 0.106, 1000) {
+cosmicMuonManager::cosmicMuonManager(): cosmicEPDF("cosmicEPDF", "pow(x+3.64/pow([0], 1.29), -2.7) * (1/(1+1.1*x*[0]/115) + 0.054/(1+1.1*x*[0]/850))", 0.106, 1000),
+cosmicEAPDF("cosmicEAPDF", "sin(y) * pow(x+3.64/pow(cos(y), 1.29), -2.7) * (1/(1+1.1*x*cos(y)/115) + 0.054/(1+1.1*x*cos(y)/850))", 0.106, 1000, 0, TMath::Pi()/2)
+{
 }
 
 G4double cosmicMuonManager::GetRndCosmicMuonEnergy(G4double theta) {
@@ -33,12 +35,19 @@ G4double cosmicMuonManager::GetRndCosmicMuonEnergy(G4double theta) {
 //        E = 1/(0.1816 * std::pow(1-uni_var, 0.45)) - 5.6187;
 //        if (E > 200) E = 200;   // 200 GeV cut off
 //    }
-    cosmicPDF.SetParameter(0, cos_theta_star);
+    cosmicEPDF.SetParameter(0, cos_theta_star);
 
-    G4double E = cosmicPDF.GetRandom();
+    G4double E = cosmicEPDF.GetRandom();
 
     E *= 1000;  // GeV to MeV
     return E;
+}
+
+void cosmicMuonManager::GetRndCosmicMuonEnergyAndAngle(G4double &E, G4double &theta, G4double &phi) {
+    cosmicEAPDF.GetRandom2(E, theta);
+    phi = rndManager.Uniform() * 360;
+    E *= 1000;
+    theta *= 180/TMath::Pi();
 }
 
 cosmicMuonManager& cosmicMuonManager::GetInstance() {
