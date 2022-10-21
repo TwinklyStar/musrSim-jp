@@ -182,6 +182,7 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 
 ### Xin tong
 - [ ] Use det_time_start and trackID to further study abnormal events
+- [ ] Compare the track from the same positron with and without shell
 
 ### Fang yuan
 - [ ] Analyze performance of Cu absorber >10mm
