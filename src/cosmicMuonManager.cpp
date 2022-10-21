@@ -5,23 +5,24 @@
 #include "cosmicMuonManager.h"
 
 cosmicMuonManager::cosmicMuonManager(): cosmicEPDF("cosmicEPDF", "pow(x+3.64/pow([0], 1.29), -2.7) * (1/(1+1.1*x*[0]/115) + 0.054/(1+1.1*x*[0]/850))", 0.106, 1000),
-cosmicEAPDF("cosmicEAPDF", "sin(y) * pow(x+3.64/pow(cos(y), 1.29), -2.7) * (1/(1+1.1*x*cos(y)/115) + 0.054/(1+1.1*x*cos(y)/850))", 0.106, 1000, 0, TMath::Pi()/2)
+cosmicAPDF("cosmicAPDF", "1/pow(sqrt(30276*cos(x)*cos(x) + 2*174 +1) - 174*cos(x), 2)", 0, TMath::Pi()/2)
 {
 }
 
 G4double cosmicMuonManager::GetRndCosmicMuonEnergy(G4double theta) {
 //    G4double uni_var = G4UniformRand();
-    G4double theta_rad = theta * TMath::Pi() / 180;
-    G4double cos_theta = std::cos(theta_rad);
-    G4double P_1 = 0.102573;
-    G4double P_2 = -0.068287;
-    G4double P_3 = 0.958633;
-    G4double P_4 = 0.0407253;
-    G4double P_5 = 0.817285;
-
-    G4double num = cos_theta*cos_theta + P_1*P_1 + P_2*std::pow(cos_theta, P_3) + P_4*std::pow(cos_theta, P_5);
-    G4double den = 1 + P_1*P_1 + P_2 + P_4;
-    G4double cos_theta_star = std::sqrt(num/den);
+//    G4double theta_rad = theta * TMath::Pi() / 180;
+//    G4double cos_theta = std::cos(theta_rad);
+//    G4double P_1 = 0.102573;
+//    G4double P_2 = -0.068287;
+//    G4double P_3 = 0.958633;
+//    G4double P_4 = 0.0407253;
+//    G4double P_5 = 0.817285;
+//
+//    G4double num = cos_theta*cos_theta + P_1*P_1 + P_2*std::pow(cos_theta, P_3) + P_4*std::pow(cos_theta, P_5);
+//    G4double den = 1 + P_1*P_1 + P_2 + P_4;
+//    G4double cos_theta_star = std::sqrt(num/den);
+        G4double cos_theta_star = 1;
 //    std::cout << cos_theta_star << std::endl;
 
 //    double E=0.;
@@ -43,12 +44,10 @@ G4double cosmicMuonManager::GetRndCosmicMuonEnergy(G4double theta) {
     return E;
 }
 
-void cosmicMuonManager::GetRndCosmicMuonEnergyAndAngle(G4double &E, G4double &theta, G4double &phi) {
-    cosmicEAPDF.GetRandom2(E, theta);
-    phi = rndManager.Uniform() * 360;
-    E *= 1000;
-    theta *= 180/TMath::Pi();
+G4double cosmicMuonManager::GetRndCosmicMuonAngle() {
+    return cosmicAPDF.GetRandom();
 }
+
 
 cosmicMuonManager& cosmicMuonManager::GetInstance() {
     static cosmicMuonManager instance;

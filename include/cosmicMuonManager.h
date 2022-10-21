@@ -19,12 +19,12 @@ public:
 
     static cosmicMuonManager& GetInstance();    // Meyers’ Singleton
     G4double GetRndCosmicMuonEnergy(G4double theta);
-    void GetRndCosmicMuonEnergyAndAngle(G4double &E, G4double &theta, G4double &phi);
+    G4double GetRndCosmicMuonAngle();
     TRandom rndManager;
 
 private:
     TF1 cosmicEPDF;
-    TF2 cosmicEAPDF;
+    TF1 cosmicAPDF;
 
 };
 

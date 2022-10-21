@@ -237,8 +237,9 @@ void musrPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 
         if (if_cosmic){
             cosmicMuonManager myCosmicManager = cosmicMuonManager::GetInstance();
-            G4double theta, phi;
-            myCosmicManager.GetRndCosmicMuonEnergyAndAngle(E_tot, theta, phi);
+            phi = G4UniformRand() * 2 * TMath::Pi();
+            theta = myCosmicManager.GetRndCosmicMuonAngle();
+//            std::cout << theta << std::endl;
         }
         else {
             // Add some initial angle (px and py component of the momentum)
@@ -260,8 +261,8 @@ void musrPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
     do {
         if (if_cosmic){
             G4double particle_mass = particleGun->GetParticleDefinition()->GetPDGMass();
-//            cosmicMuonManager myCosmicManager = cosmicMuonManager::GetInstance();
-//            E_tot = myCosmicManager.GetRndCosmicMuonEnergy(0);
+            cosmicMuonManager myCosmicManager = cosmicMuonManager::GetInstance();
+            E_tot = myCosmicManager.GetRndCosmicMuonEnergy(0);
             p = std::sqrt(E_tot * E_tot - particle_mass * particle_mass);
         }
         else{
@@ -283,7 +284,7 @@ void musrPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   if (if_cosmic){
       px = p * sin(theta) * cos(phi);
       py = p * sin(theta) * sin(phi);
-      pz = p * cos(theta);
+      pz = std::sqrt(p*p - px*px - py*py);
   }
   else {
       if (zangleSigma<0) {
