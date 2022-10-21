@@ -161,19 +161,35 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 
 ## 10.14-10.20
 ### Meng
-- [ ] Add cosmic muon polarization distribution and angular distribution
+- [x] Add cosmic muon polarization distribution and angular distribution
 
 ### Xin tong
-- [ ] Complete the position recostruction without shell
-- [ ] Evaluate the influence of shell on e+ reconstruction
+- [x] Complete the position recostruction without shell
+- [x] Evaluate the influence of shell on e+ reconstruction
 
 ### Fang yuan
-- [ ] Study the effect of absorber thickness to 4-corner detector's polarization detecting sensitivity
-- [ ] Figure out the best absorber thickness
+- [x] Study the effect of absorber thickness to 4-corner detector's polarization detecting sensitivity
+- [x] Figure out the best absorber thickness
 
 ### Si yuan
-- [ ] Study the angular distribution with regard to absorber thickness
-- [ ] Help Xintong to build position reconstruction
+- [x] Study the angular distribution with regard to absorber thickness
+- [x] Help Xintong to build position reconstruction
+
+## 10.21-10.27
+### Meng
+- [ ] Add another 2 layers to the corner detector and evaluate its performance
+- [ ] Generate more simulation data
+
+### Xin tong
+- [ ] Use det_time_start and trackID to further study abnormal events
+
+### Fang yuan
+- [ ] Analyze performance of Cu absorber >10mm
+- [ ] Transfer current algorithm to Up-Down detector structure
+
+### Si yuan
+- [ ] Develop coincidence algorithm
+
 
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
