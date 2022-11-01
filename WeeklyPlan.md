@@ -178,18 +178,32 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 ## 10.21-10.27
 ### Meng
 - [ ] Add another 2 layers to the corner detector and evaluate its performance
-- [ ] Generate more simulation data
+- [x] Generate more simulation data
 
 ### Xin tong
 - [ ] Use det_time_start and trackID to further study abnormal events
 - [ ] Compare the track from the same positron with and without shell
 
 ### Fang yuan
-- [ ] Analyze performance of Cu absorber >10mm
-- [ ] Transfer current algorithm to Up-Down detector structure
+- [x] Analyze performance of Cu absorber >10mm
+- [x] Transfer current algorithm to Up-Down detector structure
 
 ### Si yuan
-- [ ] Develop coincidence algorithm
+- [x] Develop coincidence algorithm
+
+### 10.28-11.9
+### Meng
+- [ ] Add another 2 layers to the corner detector and evaluate its performance
+
+### Xin tong
+- [ ] Use det_time_start and trackID to further study abnormal events
+- [ ] Compare the track from the same positron with and without shell
+
+### Fang yuan
+- [ ] Calibrate A-P curve of two structures
+
+### Si yuan
+- [ ] Further optimize the coincidence algorithm
 
 
 ## Future work reminder
