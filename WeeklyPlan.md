@@ -191,19 +191,32 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 ### Si yuan
 - [x] Develop coincidence algorithm
 
-### 10.28-11.9
+## 10.28-11.9
 ### Meng
 - [ ] Add another 2 layers to the corner detector and evaluate its performance
 
 ### Xin tong
-- [ ] Use det_time_start and trackID to further study abnormal events
-- [ ] Compare the track from the same positron with and without shell
+- [x] Use det_time_start and trackID to further study abnormal events
+- [x] Compare the track from the same positron with and without shell
 
 ### Fang yuan
-- [ ] Calibrate A-P curve of two structures
+- [x] Calibrate A-P curve of two structures
 
 ### Si yuan
-- [ ] Further optimize the coincidence algorithm
+- [x] Further optimize the coincidence algorithm
+
+## 11.11-11.23
+### Meng
+- [ ] Add another 2 layers to the corner detector and evaluate its performance
+
+### Xin tong
+- [ ] Develop coincidence algorithm for up-down structure
+
+### Fang yuan
+- [ ] Develop e+ detector algorithm to reject background from particles other than e+
+
+### Si yuan
+- [ ] Further develop and optimize coincidence algorithm of corner detector
 
 
 ## Future work reminder
