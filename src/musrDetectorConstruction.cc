@@ -1579,6 +1579,7 @@ G4VPhysicalVolume* musrDetectorConstruction::Construct()  {
       else if (strcmp(tmpString1, "SetOutputFileName") == 0) {} // Exception for setting file name command
       else if (strcmp(tmpString1, "SetRndSeedOffset") == 0) {} // Exception for setting random seed offset
       else if (strcmp(tmpString1, "SetRndSeed") == 0) {} // Exception for setting random seed
+      else if (strcmp(tmpString1, "VisualizeEvent") == 0) {} // Exception for visualize specific event
 
       else {ReportGeometryProblem(line);}
       

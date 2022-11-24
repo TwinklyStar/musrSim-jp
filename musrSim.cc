@@ -80,6 +80,7 @@ int main(int argc,char** argv) {
     std::string name = "";
     int random_seed_offset = 0;
     int random_seed = 0;
+    G4int kept_evt_num = -1;
 
     if(argc > 2) {
         name = std::string(argv[2]);
@@ -113,6 +114,9 @@ int main(int argc,char** argv) {
             if (!(argc >3) && !cmd1.compare("/musr/command") && !cmd2.compare("SetRndSeedOffset")){
                 random_seed_offset = atoi(cmd3.c_str());
                 std::cout << "musrSim.cc: Set random seed offset: " << random_seed_offset << std::endl;
+            }
+            if (!cmd1.compare("/musr/command") && !cmd2.compare("VisualizeEvent")){
+                kept_evt_num = atoi(cmd3.c_str());
             }
         }
     }
@@ -153,7 +157,7 @@ int main(int argc,char** argv) {
     // UserAction classes
     runManager->SetUserAction(new musrPrimaryGeneratorAction(musrdetector));
     runManager->SetUserAction(new musrRunAction);
-    runManager->SetUserAction(new musrEventAction);
+    runManager->SetUserAction(new musrEventAction(kept_evt_num));
     // Initiate musrStackingAction only if optical photons are required (otherwise not needed)
     if (musrParameters::boolG4OpticalPhotons) runManager->SetUserAction(new musrStackingAction);
     runManager->SetUserAction(new musrSteppingAction);

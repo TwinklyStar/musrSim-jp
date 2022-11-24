@@ -47,6 +47,10 @@ G4double  musrEventAction::maximumRunTimeAllowed=85000;
 musrEventAction::musrEventAction() {
   pointer=this;
   timeOfRunStart = -1000;
+  kept_evt_num = -1;
+}
+musrEventAction::musrEventAction(G4int evt_num) {
+    kept_evt_num = evt_num;
 }
 musrEventAction* musrEventAction::pointer=0;
 musrEventAction* musrEventAction::GetInstance() {
@@ -78,6 +82,11 @@ void musrEventAction::BeginOfEventAction(const G4Event* evt) {
 void musrEventAction::EndOfEventAction(const G4Event* evt)  {
   //  cout << ":." << flush;
   long thisEventNr = (long) evt->GetEventID();
+
+  if (thisEventNr == kept_evt_num) {
+      G4EventManager::GetEventManager()->KeepTheCurrentEvent();
+      std::cout << "Store Event: " << thisEventNr << std::endl;
+  }
 
   //  musrSteppingAction::GetInstance()->DoAtTheEndOfEvent();
   

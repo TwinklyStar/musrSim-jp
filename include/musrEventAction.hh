@@ -38,6 +38,7 @@ class musrEventAction : public G4UserEventAction
 {
   public:
     musrEventAction();
+    musrEventAction(G4int evt_num);
    ~musrEventAction();
 
   public:
@@ -53,6 +54,7 @@ class musrEventAction : public G4UserEventAction
   //    Variables for the time-dependent magnetic field
     G4bool   timeDependentField;
     time_t   timeOfRunStart;
+    G4int    kept_evt_num;
 
   public:
     static G4int  nHowOftenToPrintEvent;
