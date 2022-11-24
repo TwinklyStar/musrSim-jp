@@ -170,3 +170,27 @@ Example：
 /gun/cosmic false
 ```
 Once being turned on, it will overwrite all other settings for momentum and kinetic energy in `.mac` file.
+
+### 2022-11-24 (ML & XT)
+Add event display, which can store 1 specific event visualization each run.
+To turn on this function, you should make following changes in `.mac` file in specific positions
+
+Example: the macro showed below stores the visualization of 11th event (event number is 10). Lines with arrow are newly added
+```
+...
+##### VISUALIZATION #####
+/vis/drawOnlyToBeKeptEvents         # <----
+/musr/command VisualizeEvent 10     # <----
+/vis/disable                        # Do NOT comment this line
+#/control/execute visFromToni.mac
+#/control/execute visDawn101.mac
+/control/execute visVRML.mac
+...
+
+##### BEAM ON #####
+/run/beamon 100
+/vis/enable                         # <----
+/vis/reviewKeptEvents               # <----
+...
+
+```
