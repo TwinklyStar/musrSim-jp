@@ -50,6 +50,8 @@ musrEventAction::musrEventAction() {
   kept_evt_num = -1;
 }
 musrEventAction::musrEventAction(G4int evt_num) {
+    pointer=this;
+    timeOfRunStart = -1000;
     kept_evt_num = evt_num;
 }
 musrEventAction* musrEventAction::pointer=0;
@@ -85,7 +87,7 @@ void musrEventAction::EndOfEventAction(const G4Event* evt)  {
 
   if (thisEventNr == kept_evt_num) {
       G4EventManager::GetEventManager()->KeepTheCurrentEvent();
-      std::cout << "Store Event: " << thisEventNr << std::endl;
+      std::cout << "musrEventAction.cc: Store Visualization of Event: " << thisEventNr << std::endl;
   }
 
   //  musrSteppingAction::GetInstance()->DoAtTheEndOfEvent();
