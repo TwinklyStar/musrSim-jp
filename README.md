@@ -197,7 +197,8 @@ Example: the macro showed below stores the visualization of 11th event (event nu
 
 2022-11-26 (ML)
 
-Add root event selector. You can customize your selection in `rootEventSelector::Selector()`, which is in `rootEventSelector.cc`\
+Add root event selector. Only events that satisfy the selection will be stored\
+You can customize your selection in `rootEventSelector::Selector()`, which is in `rootEventSelector.cc`\
 A simple example is already provided in `rootEventSelector::Selector()`\
 After adding your cut, be sure to **build again before running**.
 
