@@ -95,9 +95,13 @@ void musrEventAction::EndOfEventAction(const G4Event* evt)  {
   // write out the root tree:
   musrRootOutput* myRootOutput = musrRootOutput::GetRootInstance();
   G4RunManager* fRunManager = G4RunManager::GetRunManager();
+  rootEventSelector* myEventSelector = rootEventSelector::GetInstance();
   myRootOutput->SetRunID(fRunManager->GetCurrentRun()->GetRunID());
   myRootOutput->SetEventID(fRunManager->GetCurrentEvent()->GetEventID());
-  myRootOutput->FillEvent();
+  if ( (myEventSelector->*(myEventSelector->selector_pointer))() ) {
+      myRootOutput->FillEvent();
+      G4EventManager::GetEventManager()->KeepTheCurrentEvent();
+  }
 
   // get number of stored trajectories
   G4TrajectoryContainer* trajectoryContainer = evt->GetTrajectoryContainer();

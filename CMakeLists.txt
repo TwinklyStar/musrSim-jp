@@ -47,7 +47,7 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh ${PROJECT_SOURCE_DIR}/inclu
 #----------------------------------------------------------------------------
 # Add the executable, and link it to the Geant4 libraries
 #
-add_executable(musrSim_jp musrSim.cc ${sources} ${headers})
+add_executable(musrSim_jp musrSim.cc ${sources} ${headers} include/rootEventSelector.hh src/rootEventSelector.cc)
 ##FIND_PACKAGE( ROOT )
 #SET(ROOT_CONFIG_EXECUTABLE /home/download/Root_5.24_source/root/bin/root-config)
 ## ask root-config for the library varaibles

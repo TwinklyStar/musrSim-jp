@@ -26,6 +26,7 @@
 
 #include "globals.hh"
 #include "G4UserEventAction.hh"
+#include "rootEventSelector.hh"
 class G4Timer;
 class G4Event;
 class musrMagneticField;

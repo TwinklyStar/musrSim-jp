@@ -34,6 +34,11 @@ musrRootOutput::musrRootOutput(std::string name) {
     // to 100 GB (instead of 1.9 GB).
     run_name = name;
     pointerToRoot=this;
+
+    // Assign this implementation to rootEventSelector
+    rootEventSelector* myEventSelector = rootEventSelector::GetInstance();
+    myEventSelector->SetRootOutputPtr(this);
+
     boolIsAnySpecialSaveVolumeDefined=false;
     nFieldNomVal=0;
     strcpy(rootOutputDirectoryName,"data");

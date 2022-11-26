@@ -9,6 +9,7 @@
 #include "musrSteppingVerbose.hh"
 
 #include "cosmicMuonManager.h"
+#include "rootEventSelector.hh"
 
 #include <string>
 
@@ -62,6 +63,9 @@ int main(int argc,char** argv) {
 
     //my Verbose output class
     G4VSteppingVerbose::SetInstance(new musrSteppingVerbose);
+
+    // root event selector
+    rootEventSelector* my_evtselector_manager = new rootEventSelector();
 
     // Run manager
     G4RunManager * runManager = new G4RunManager;
@@ -117,6 +121,11 @@ int main(int argc,char** argv) {
             }
             if (!cmd1.compare("/musr/command") && !cmd2.compare("VisualizeEvent")){
                 kept_evt_num = atoi(cmd3.c_str());
+            }
+            if (!cmd1.compare("/musr/command") && !cmd2.compare("rootEventSelector") && !cmd3.compare("on")){
+                rootEventSelector* evt_selector = rootEventSelector::GetInstance();
+                evt_selector->UseSelector();
+                std::cout << "musrSim.cc: Turn on the event selector" << std::endl;
             }
         }
     }
@@ -210,6 +219,7 @@ int main(int argc,char** argv) {
 #ifdef G4VIS_USE
     delete visManager;
 #endif
+    delete my_evtselector_manager;
     delete myRootOutput;
     delete myErrorMessage;
     delete myParameters;

@@ -27,6 +27,7 @@
 #include <CLHEP/Units/PhysicalConstants.h>
 #include "globals.hh"
 #include "G4ThreeVector.hh"
+#include "rootEventSelector.hh"
 //  ROOT
 #include "TFile.h"
 #include "TTree.h"
@@ -51,6 +52,7 @@ public:
     static musrRootOutput* GetRootInstance();
 
 public:
+    friend class rootEventSelector;
     void BeginOfRunAction();
     void EndOfRunAction();
     void FillEvent();
