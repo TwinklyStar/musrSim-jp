@@ -218,6 +218,20 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 ### Si yuan
 - [ ] Further develop and optimize coincidence algorithm of corner detector
 
+## 11.24-12.3
+### Meng
+- [ ] Add customized event selector
+- [ ] Add another 2 layers to the corner detector and evaluate its performance
+
+### Xin tong
+- [ ] Develop coincidence algorithm for up-down structure
+
+### Fang yuan
+- [ ] Develop e+ detector algorithm to reject background from particles other than e+
+
+### Si yuan
+- [ ] Further develop and optimize coincidence algorithm of corner detector
+
 
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
