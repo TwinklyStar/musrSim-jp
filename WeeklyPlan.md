@@ -207,16 +207,16 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 
 ## 11.11-11.23
 ### Meng
-- [ ] Add another 2 layers to the corner detector and evaluate its performance
+- [x] Add another 2 layers to the corner detector and evaluate its performance
 
 ### Xin tong
-- [ ] Develop coincidence algorithm for up-down structure
+- [x] Develop coincidence algorithm for up-down structure
 
 ### Fang yuan
-- [ ] Develop e+ detector algorithm to reject background from particles other than e+
+- [x] Develop e+ detector algorithm to reject background from particles other than e+
 
 ### Si yuan
-- [ ] Further develop and optimize coincidence algorithm of corner detector
+- [x] Further develop and optimize coincidence algorithm of corner detector
 
 ## 11.24-12.3
 ### Meng
