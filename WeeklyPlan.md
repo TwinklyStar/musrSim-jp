@@ -220,17 +220,34 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 
 ## 11.24-12.3
 ### Meng
-- [ ] Add customized event selector
-- [ ] Add another 2 layers to the corner detector and evaluate its performance
+- [x] Add customized event selector
+- [x] Add another 2 layers to the corner detector and evaluate its performance
 
 ### Xin tong
-- [ ] Develop coincidence algorithm for up-down structure
+- [x] Develop coincidence algorithm for up-down structure
 
 ### Fang yuan
-- [ ] Develop e+ detector algorithm to reject background from particles other than e+
+- [x] Develop e+ detector algorithm to reject background from particles other than e+
 
 ### Si yuan
-- [ ] Further develop and optimize coincidence algorithm of corner detector
+- [x] Further develop and optimize coincidence algorithm of corner detector
+
+## 12.4-12.21
+### Meng
+- [ ] Optimize 2-layer detector performance and evaluate its background rejection
+- [ ] Add energy bin for Phase 3 reconstruction
+- [ ] Start searching for hardware construction
+
+### Xin tong
+- [ ] Draw E-t plots of different cases in Phase 1
+- [ ] Complete coincidence algorithm in Phase 1
+
+### Fang yuan
+- [ ] Optimize e+ detection algorithm
+
+### Si yuan
+- [ ] Draw E-t plots of different cases in Phase 2
+- [ ] Complete coincidence algorithm in Phase 2
 
 
 ## Future work reminder

@@ -23,7 +23,7 @@ bool rootEventSelector::Selector() {
     bool if_save = true;
 
     // ******************* fill your conditions here ********************
-    if_save = (root_manager->eventID == 5);
+    if_save = (root_manager->eventID == 5 || root_manager->eventID == 6);
 
     // ******************************************************************
 
