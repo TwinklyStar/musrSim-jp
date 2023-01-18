@@ -1486,6 +1486,9 @@ G4VPhysicalVolume* musrDetectorConstruction::Construct()  {
 	  if (strcmp(tmpString2,"posIniMomX")==0)   {musrRootOutput::store_posIniMomX = false;}
 	  if (strcmp(tmpString2,"posIniMomY")==0)   {musrRootOutput::store_posIniMomY = false;}
 	  if (strcmp(tmpString2,"posIniMomZ")==0)   {musrRootOutput::store_posIniMomZ = false;}
+        if (strcmp(tmpString2,"elIniMomX")==0)   {musrRootOutput::store_elIniMomX = false;}
+        if (strcmp(tmpString2,"elIniMomY")==0)   {musrRootOutput::store_elIniMomY = false;}
+        if (strcmp(tmpString2,"elIniMomZ")==0)   {musrRootOutput::store_elIniMomZ = false;}
 	  if (strcmp(tmpString2,"nOptPhot")==0)     {musrRootOutput::store_nOptPhot   = false;}
 	  if (strcmp(tmpString2,"nOptPhotDet")==0)  {musrRootOutput::store_nOptPhotDet = false;}
 	  if (strcmp(tmpString2,"fieldNomVal")==0)  {musrRootOutput::store_fieldNomVal = false;}

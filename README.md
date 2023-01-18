@@ -206,3 +206,14 @@ You can turn your selector on by adding following command in `.mac` file:
 ```
 /musr/command rootEventSelector on
 ```
+
+2023-1-18 (ML)
+
+Add momentum information of the first electron decayed from mu-.\
+Note that these branches are only valid when initial particle is mu-.\
+Branch name: `elIniMomX(/Y/Z)`
+
+You can turn it off by adding following command in `.mac` file:
+```
+/musr/command rootOutput <branch_name> off
+```

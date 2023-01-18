@@ -127,6 +127,7 @@ public:
     void SetPolInM2(G4ThreeVector pol) {muM2PolX=pol.x(); muM2PolY=pol.y(); muM2PolZ=pol.z();}
     void SetTimeInM2(G4double time) {muM2Time = time/CLHEP::microsecond;}
     void SetInitialPositronMomentum(G4ThreeVector mom) {posIniMomx=mom.x();  posIniMomy=mom.y(); posIniMomz=mom.z();}
+    void SetInitialElectronMomentum(G4ThreeVector mom) {elIniMomx=mom.x();  elIniMomy=mom.y(); elIniMomz=mom.z();}
     void SetNOptPhot(G4int value) {nOptPhot=value;}
     void SetPhotDetTime(G4double time);
     void SetDecayTime(G4double time) {muDecayTime=time/CLHEP::microsecond;}
@@ -193,6 +194,9 @@ public:
     static G4bool store_posIniMomX;
     static G4bool store_posIniMomY;
     static G4bool store_posIniMomZ;
+    static G4bool store_elIniMomX;
+    static G4bool store_elIniMomY;
+    static G4bool store_elIniMomZ;
     static G4bool store_nOptPhot;
     static G4bool store_nOptPhotDet;
     static G4bool store_phot_time;
@@ -299,6 +303,7 @@ private:
     Double_t muDecayPosX, muDecayPosY, muDecayPosZ;
     Double_t muDecayTime;
     Double_t posIniMomx, posIniMomy, posIniMomz;
+    Double_t elIniMomx, elIniMomy, elIniMomz;
     Int_t    nOptPhot, nOptPhotDet;
     static const Int_t maxNOptPhotDet=10000;
     Double_t phot_time[maxNOptPhotDet];

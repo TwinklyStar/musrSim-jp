@@ -380,6 +380,9 @@ void musrSteppingAction::UserSteppingAction(const G4Step* aStep)  {
 	    if ( ((*secondary)[i]->GetDefinition()->GetParticleName()) == "e+" ) {
 	      myRootOutput->SetInitialPositronMomentum((*secondary)[i]->GetMomentum());
 	    }
+        else if ( ((*secondary)[i]->GetDefinition()->GetParticleName()) == "e-" ) {
+            myRootOutput->SetInitialElectronMomentum((*secondary)[i]->GetMomentum());
+        }
 	  }
 	}
       }

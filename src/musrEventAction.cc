@@ -100,7 +100,7 @@ void musrEventAction::EndOfEventAction(const G4Event* evt)  {
   myRootOutput->SetEventID(fRunManager->GetCurrentEvent()->GetEventID());
   if ( (myEventSelector->*(myEventSelector->selector_pointer))() ) {
       myRootOutput->FillEvent();
-      G4EventManager::GetEventManager()->KeepTheCurrentEvent();
+//      G4EventManager::GetEventManager()->KeepTheCurrentEvent();
   }
 
   // get number of stored trajectories

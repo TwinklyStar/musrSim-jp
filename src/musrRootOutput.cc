@@ -135,6 +135,9 @@ G4bool musrRootOutput::store_muM2PolZ = false;
 G4bool musrRootOutput::store_posIniMomX = true;
 G4bool musrRootOutput::store_posIniMomY = true;
 G4bool musrRootOutput::store_posIniMomZ = true;
+G4bool musrRootOutput::store_elIniMomX = true;
+G4bool musrRootOutput::store_elIniMomY = true;
+G4bool musrRootOutput::store_elIniMomZ = true;
 G4bool musrRootOutput::store_nOptPhot   = true;
 G4bool musrRootOutput::store_nOptPhotDet= true;
 G4bool musrRootOutput::store_phot_time  = false;
@@ -270,6 +273,9 @@ void musrRootOutput::BeginOfRunAction() {
     if (store_posIniMomX)   {rootTree->Branch("posIniMomX",&posIniMomx,"posIniMomX/D");}
     if (store_posIniMomY)   {rootTree->Branch("posIniMomY",&posIniMomy,"posIniMomY/D");}
     if (store_posIniMomZ)   {rootTree->Branch("posIniMomZ",&posIniMomz,"posIniMomZ/D");}
+    if (store_elIniMomX)   {rootTree->Branch("elIniMomX",&elIniMomx,"elIniMomX/D");}
+    if (store_elIniMomY)   {rootTree->Branch("elIniMomY",&elIniMomy,"elIniMomY/D");}
+    if (store_elIniMomZ)   {rootTree->Branch("elIniMomZ",&elIniMomz,"elIniMomZ/D");}
     if (musrParameters::boolG4OpticalPhotons) {
         if (store_nOptPhot)     {rootTree->Branch("nOptPhot",&nOptPhot,"nOptPhot/I");}
         if (store_nOptPhotDet)  {rootTree->Branch("nOptPhotDet",&nOptPhotDet,"nOptPhotDet/I");}
@@ -564,6 +570,7 @@ void musrRootOutput::ClearAllRootVariables() {
     muDecayPosX=-1000;muDecayPosY=-1000;muDecayPosZ=-1000;
     muDecayTime=-1000;
     posIniMomx=-1000;posIniMomy=-1000;posIniMomz=-1000;
+    elIniMomx=-1000;elIniMomy=-1000;elIniMomz=-1000;
     nOptPhot=0;
     nOptPhotDet=0;
     BxIntegral = -1000; ByIntegral = -1000; BzIntegral = -1000;
