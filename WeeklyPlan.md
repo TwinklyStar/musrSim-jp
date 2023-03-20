@@ -249,6 +249,10 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 - [ ] Draw E-t plots of different cases in Phase 2
 - [ ] Complete coincidence algorithm in Phase 2
 
+## 2023.3.20
+## Meng 
+- [ ] Github test
+
 
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
