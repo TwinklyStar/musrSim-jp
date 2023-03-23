@@ -1,5 +1,6 @@
 # <center>Project Weekly Plan</center>
 
+# 2022
 ## 7.12 - 7.18
 ### Meng
 - [x] Create a j-box folder to share programme, data and report slides
@@ -234,24 +235,49 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 
 ## 12.4-12.21
 ### Meng
-- [ ] Optimize 2-layer detector performance and evaluate its background rejection
-- [ ] Add energy bin for Phase 3 reconstruction
-- [ ] Start searching for hardware construction
+- [x] Optimize 2-layer detector performance and evaluate its background rejection
+- [x] Add energy bin for Phase 3 reconstruction
+- [x] Start searching for hardware construction
 
 ### Xin tong
-- [ ] Draw E-t plots of different cases in Phase 1
-- [ ] Complete coincidence algorithm in Phase 1
+- [x] Draw E-t plots of different cases in Phase 1
+- [x] Complete coincidence algorithm in Phase 1
 
 ### Fang yuan
-- [ ] Optimize e+ detection algorithm
+- [x] Optimize e+ detection algorithm
 
 ### Si yuan
-- [ ] Draw E-t plots of different cases in Phase 2
-- [ ] Complete coincidence algorithm in Phase 2
+- [x] Draw E-t plots of different cases in Phase 2
+- [x] Complete coincidence algorithm in Phase 2
 
-## 2023.3.20
+# 2023
+## 3.22-3.29
 ## Meng
-- [ ] Github test
+- [ ] Fix the bug of DAQ time sequence
+- [ ] Complete the abstract of the Poster
+
+## Xin tong
+- [ ] Study and visualize events that hit >= 4 scintillators
+  - [ ] Pass-through Events
+    - [ ] Frequency
+    - [ ] Angular distribution
+  - [ ] Showering Events
+    - [ ] Frequency
+  - [ ] ...
+- [ ] Compose the simulation poster
+
+## Fang yuan
+- [ ] Optimize Landau Fitting with fixed peak range
+- [ ] Fit energy distribution of pass-through events
+- [ ] Study decay events (together with Meng)
+  - [ ] Select decay events
+  - [ ] Frequency
+  - [ ] Decay time distribution (~2.2 us?)
+  - [ ] Polarization Measurement
+
+## Si yuan
+- [ ] Optimize muon source distribution
+- [ ] Optimize Landau distribution fitting
 
 
 
