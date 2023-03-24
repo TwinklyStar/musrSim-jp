@@ -280,7 +280,6 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 - [ ] Optimize Landau distribution fitting
 
 
-
 ## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
 - [ ] Add depolarization physic process
