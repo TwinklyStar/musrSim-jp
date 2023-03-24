@@ -257,29 +257,26 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 - [ ] Complete the abstract of the Poster
 
 ## Xin tong
-- [ ] Study and visualize events that hit >= 4 scintillators
-  - [ ] Pass-through Events
-    - [ ] Frequency
-    - [ ] Angular distribution
-  - [ ] Showering Events
-    - [ ] Frequency
-  - [ ] ...
+- [ ] Study and visualize passing-trough events
+  - [ ] Frequency
+  - [ ] Angular distribution
 - [ ] Compose the simulation poster
 
 ## Fang yuan
 - [ ] Optimize Landau Fitting with fixed peak range
 - [ ] Fit energy distribution of pass-through events
-- [ ] Study decay events (together with Meng)
+- [ ] Study and visualize showering events
+
+## Si yuan
+- [ ] Optimize muon source distribution
+- [ ] Optimize Landau distribution fitting of simulation
+
+## Future work reminder
+- [ ] Study decay events
   - [ ] Select decay events
   - [ ] Frequency
   - [ ] Decay time distribution (~2.2 us?)
   - [ ] Polarization Measurement
-
-## Si yuan
-- [ ] Optimize muon source distribution
-- [ ] Optimize Landau distribution fitting
-
-## Future work reminder
 - [ ] Create a process that convert surface muon into thermal muon
 - [ ] Add depolarization physic process
 - [ ] Consider the positron from Muoinum decacy
