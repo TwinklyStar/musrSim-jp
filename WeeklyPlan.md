@@ -252,24 +252,43 @@ https://indico-tdli.sjtu.edu.cn/event/1270/
 
 # 2023
 ## 3.22-3.29
-## Meng
-- [ ] Fix the bug of DAQ time sequence
-- [ ] Complete the abstract of the Poster
+### Meng
+- [x] Fix the bug of DAQ time sequence
+- [x] Complete the abstract of the Poster
 
-## Xin tong
-- [ ] Study and visualize passing-trough events
-  - [ ] Frequency
-  - [ ] Angular distribution
+### Xin tong
+- [x] Study and visualize passing-trough events
+  - [x] Frequency
+  - [x] Angular distribution
 - [ ] Compose the simulation poster
 
-## Fang yuan
-- [ ] Optimize Landau Fitting with fixed peak range
-- [ ] Fit energy distribution of pass-through events
-- [ ] Study and visualize showering events
+### Fang yuan
+- [x] Optimize Landau Fitting with fixed peak range
+- [x] Fit energy distribution of pass-through events
+- [x] Study and visualize showering events
 
-## Si yuan
-- [ ] Optimize muon source distribution
-- [ ] Optimize Landau distribution fitting of simulation
+### Si yuan
+- [x] Optimize muon source distribution
+- [x] Optimize Landau distribution fitting of simulation
+
+## 3.23 - 4.4
+### Meng
+- [ ] Compose the hardware poster
+- [ ] Find the solution for DT5702 dead time
+
+### Xin tong
+- [ ] Study passing-through events with different thresholds
+- [ ] Study angular distribution using MyAna framework
+- [ ] Compose the simulation poster
+
+### Fang yuan 
+- [ ] Conduct Landau distribution fitting with different thresholds
+- [ ] Make a calibration between edep and ADC value
+- [ ] Compose the hardware poster
+
+### Si yuan
+- [ ] Fit the Landau distribution of passing-through events (simulation)
+- [ ] Compose the simulation poster
 
 ## Future work reminder
 - [ ] Study decay events
