@@ -39,6 +39,7 @@
 #include "musrMuonium.hh"
 #include "MuDecayChannel.hh"
 #include "MuDecayChannelWithSpin.hh"
+#include "G4MuonMinusCapture.hh"    // Meng Lv: Add mu- capture process 27-05-23
 //
 #include "musrParameters.hh"
 #include "musrErrorMessage.hh"
@@ -398,6 +399,9 @@ void musrPhysicsList::ConstructEM()
 					pManager->AddProcess(myCerenkov,nr1,nr2,nr3); // added JSL
 					pManager->SetProcessOrdering(myCerenkov,idxPostStep); // from Example N06
 	  }
+
+      // Meng Lv: Add mu- capture process. 27-05-23
+      else if (stringProcessName=="G4MuonMinusCapture")            pManager->AddRestProcess(new G4MuonMinusCapture);
 	  // cks:  musrMuScatter could be uncommented here, but testing is needed, because Toni has some strange comments
 	  //       in his original "musrPhysicsList.cc about implementing musrMuScatter.
 	  //	  else if (stringProcessName=="musrMuScatter")       pManager->AddProcess(new musrMuScatter,nr1,nr2,nr3);

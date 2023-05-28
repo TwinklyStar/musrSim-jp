@@ -217,3 +217,12 @@ You can turn it off by adding following command in `.mac` file:
 ```
 /musr/command rootOutput <branch_name> off
 ```
+
+2023-5-28 (ML)
+Add mu- capture by nucleus at rest physics process
+You can turn on/off this process by adding following line in `.mac` file:
+
+```
+# This process is set to occur only when mu- is at rest
+/musr/command process addProcess mu- G4MuonMinusCapture
+```
