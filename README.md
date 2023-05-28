@@ -220,7 +220,7 @@ You can turn it off by adding following command in `.mac` file:
 
 ### 2023-5-28 (ML)
 
-Add mu- capture by nucleus at rest physics process
+Add mu- captured by nucleus at rest physics process.\
 You can turn on/off this process by adding following line in `.mac` file:
 
 ```
