@@ -195,7 +195,7 @@ Example: the macro showed below stores the visualization of 11th event (event nu
 
 ```
 
-2022-11-26 (ML)
+### 2022-11-26 (ML)
 
 Add root event selector. Only events that satisfy the selection will be stored\
 You can customize your selection in `rootEventSelector::Selector()`, which is in `rootEventSelector.cc`\
@@ -207,7 +207,7 @@ You can turn your selector on by adding following command in `.mac` file:
 /musr/command rootEventSelector on
 ```
 
-2023-1-18 (ML)
+### 2023-1-18 (ML)
 
 Add momentum information of the first electron decayed from mu-.\
 Note that these branches are only valid when initial particle is mu-.\
@@ -218,7 +218,8 @@ You can turn it off by adding following command in `.mac` file:
 /musr/command rootOutput <branch_name> off
 ```
 
-2023-5-28 (ML)
+### 2023-5-28 (ML)
+
 Add mu- capture by nucleus at rest physics process
 You can turn on/off this process by adding following line in `.mac` file:
 
