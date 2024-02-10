@@ -78,6 +78,7 @@ public:
     void SetDecayPolarisation (G4ThreeVector pol) {muDecayPolX=pol.x(); muDecayPolY=pol.y(); muDecayPolZ=pol.z();};
     void SetDecayPosition (G4ThreeVector pos) {muDecayPosX=pos.x()/CLHEP::mm; muDecayPosY=pos.y()/CLHEP::mm;
         muDecayPosZ=pos.z()/CLHEP::mm;};
+    void SetmuEndPosition (G4ThreeVector pos) {muEndPosX=pos.x()/CLHEP::mm; muEndPosY=pos.y()/pos.y(); muEndPosZ=pos.z();}
     void SetEventWeight  (G4double w) {weight *= w;}
     void SetDetectorInfo (G4int nDetectors, G4int ID, G4int particleID, G4double edep,
                           G4double edep_el, G4double edep_pos,
@@ -301,9 +302,11 @@ private:
     Double_t muM1Time, muM1PolX, muM1PolY, muM1PolZ;
     Double_t muM2Time, muM2PolX, muM2PolY, muM2PolZ;
     Double_t muDecayPosX, muDecayPosY, muDecayPosZ;
+    Double_t muEndPosX, muEndPosY, muEndPosZ;
     Double_t muDecayTime;
     Double_t posIniMomx, posIniMomy, posIniMomz;
     Double_t elIniMomx, elIniMomy, elIniMomz;
+    Double_t posEndPosX, posEndPosY, posEndPosZ;        // Decay position ending position (M. Lyu)
     Int_t    nOptPhot, nOptPhotDet;
     static const Int_t maxNOptPhotDet=10000;
     Double_t phot_time[maxNOptPhotDet];

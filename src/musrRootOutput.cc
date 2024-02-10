@@ -568,9 +568,11 @@ void musrRootOutput::ClearAllRootVariables() {
     muM1Time=-1000; muM1PolX=-1000; muM1PolY=-1000; muM1PolZ=-1000;
     muM2Time=-1000; muM2PolX=-1000; muM2PolY=-1000; muM2PolZ=-1000;
     muDecayPosX=-1000;muDecayPosY=-1000;muDecayPosZ=-1000;
+    muEndPosX=-1000; muEndPosY=-1000; muEndPosZ=-1000;
     muDecayTime=-1000;
     posIniMomx=-1000;posIniMomy=-1000;posIniMomz=-1000;
     elIniMomx=-1000;elIniMomy=-1000;elIniMomz=-1000;
+    posEndPosX=-1000; posEndPosY=-1000; posEndPosZ=-1000;
     nOptPhot=0;
     nOptPhotDet=0;
     BxIntegral = -1000; ByIntegral = -1000; BzIntegral = -1000;
