@@ -229,6 +229,7 @@ void musrSteppingAction::UserSteppingAction(const G4Step* aStep)  {
 	G4int tmpVolumeID=saveVolumeMapping[actualVolume];
 	if (tmpVolumeID!=0) {
 	  G4int particle_id_save=p_definition->GetPDGEncoding();
+      G4int prtTrack_id_save = aTrack->GetParentID();
 	  G4double ke_save=preStepPoint->GetKineticEnergy();
 	  G4double x_save=preStepPosition.x();
 	  G4double y_save=preStepPosition.y();
@@ -240,7 +241,7 @@ void musrSteppingAction::UserSteppingAction(const G4Step* aStep)  {
 	  G4double polx_save=preStepPoint->GetPolarization().x();
 	  G4double poly_save=preStepPoint->GetPolarization().y();
 	  G4double polz_save=preStepPoint->GetPolarization().z();
-	  myRootOutput->SetSaveDetectorInfo(tmpVolumeID,particle_id_save,ke_save,x_save,y_save,z_save,time_save,px_save,py_save,pz_save,polx_save,poly_save,polz_save);
+	  myRootOutput->SetSaveDetectorInfo(tmpVolumeID,particle_id_save,prtTrack_id_save,ke_save,x_save,y_save,z_save,time_save,px_save,py_save,pz_save,polx_save,poly_save,polz_save);
 	  //
           //-----------------------------------------------------------------------------------------
           //  Uncoment for iterative musrSim runs (e.g. when searching for a quadrupole triplet focus using a python script)

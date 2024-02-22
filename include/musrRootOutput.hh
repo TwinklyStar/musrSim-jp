@@ -100,7 +100,7 @@ public:
 
     void SetTimeC1SpecialInfo (G4double* time);
 
-    void SetSaveDetectorInfo (G4int ID, G4int particleID, G4double ke, G4double x, G4double y, G4double z, G4double time,
+    void SetSaveDetectorInfo (G4int ID, G4int particleID, G4int PrtTrackID, G4double ke, G4double x, G4double y, G4double z, G4double time,
                               G4double px, G4double py, G4double pz, G4double polx, G4double poly, G4double polz) ;
 
     void SetInitialMuonParameters(G4double x, G4double y, G4double z, G4double px, G4double py, G4double pz,
@@ -503,6 +503,7 @@ private:
     G4int    save_n;
     G4int    save_detID[save_nMax];
     G4int    save_particleID[save_nMax];
+    G4int    save_PrtTrackID[save_nMax];
     G4double save_ke[save_nMax];
     G4double save_time[save_nMax];
     G4double save_x[save_nMax];

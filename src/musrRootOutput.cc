@@ -340,6 +340,7 @@ void musrRootOutput::BeginOfRunAction() {
         rootTree->Branch("save_n",&save_n,"save_n/I");
         rootTree->Branch("save_detID",&save_detID,"save_detID[save_n]/I");
         rootTree->Branch("save_particleID",&save_particleID,"save_particleID[save_n]/I");
+        rootTree->Branch("save_PrtTrackID",&save_PrtTrackID,"save_PrtTrackID[save_n]/I");
         rootTree->Branch("save_ke",&save_ke,"save_ke[save_n]/D");
         rootTree->Branch("save_time",&save_time,"save_time[save_n]/D");
         rootTree->Branch("save_x",&save_x,"save_x[save_n]/D");
@@ -626,7 +627,7 @@ G4int musrRootOutput::ConvertProcessToID(std::string processName) {
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void musrRootOutput::SetSaveDetectorInfo (G4int ID, G4int particleID, G4double ke,
+void musrRootOutput::SetSaveDetectorInfo (G4int ID, G4int particleID, G4int PrtTrackID, G4double ke,
                                           G4double x, G4double y, G4double z, G4double time,
                                           G4double px, G4double py, G4double pz, G4double polx, G4double poly, G4double polz) {
     if (save_n>=save_nMax) {
@@ -637,6 +638,7 @@ void musrRootOutput::SetSaveDetectorInfo (G4int ID, G4int particleID, G4double k
     else {
         save_detID[save_n] = ID;
         save_particleID[save_n] = particleID;
+        save_PrtTrackID[save_n] = PrtTrackID;
         save_ke[save_n] = ke / CLHEP::MeV;
         save_x[save_n] = x / CLHEP::mm;
         save_y[save_n] = y / CLHEP::mm;
