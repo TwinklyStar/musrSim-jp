@@ -1486,6 +1486,9 @@ G4VPhysicalVolume* musrDetectorConstruction::Construct()  {
 	  if (strcmp(tmpString2,"posIniMomX")==0)   {musrRootOutput::store_posIniMomX = false;}
 	  if (strcmp(tmpString2,"posIniMomY")==0)   {musrRootOutput::store_posIniMomY = false;}
 	  if (strcmp(tmpString2,"posIniMomZ")==0)   {musrRootOutput::store_posIniMomZ = false;}
+	  if (strcmp(tmpString2,"posEndPosX")==0)   {musrRootOutput::store_posEndPosX = false;}
+	  if (strcmp(tmpString2,"posEndPosY")==0)   {musrRootOutput::store_posEndPosY = false;}
+	  if (strcmp(tmpString2,"posEndPosZ")==0)   {musrRootOutput::store_posEndPosZ = false;}
         if (strcmp(tmpString2,"elIniMomX")==0)   {musrRootOutput::store_elIniMomX = false;}
         if (strcmp(tmpString2,"elIniMomY")==0)   {musrRootOutput::store_elIniMomY = false;}
         if (strcmp(tmpString2,"elIniMomZ")==0)   {musrRootOutput::store_elIniMomZ = false;}
@@ -2029,4 +2032,3 @@ void musrDetectorConstruction::SetColourOfLogicalVolume(G4LogicalVolume* pLogVol
     }
   }
 }
-

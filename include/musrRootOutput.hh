@@ -78,7 +78,6 @@ public:
     void SetDecayPolarisation (G4ThreeVector pol) {muDecayPolX=pol.x(); muDecayPolY=pol.y(); muDecayPolZ=pol.z();};
     void SetDecayPosition (G4ThreeVector pos) {muDecayPosX=pos.x()/CLHEP::mm; muDecayPosY=pos.y()/CLHEP::mm;
         muDecayPosZ=pos.z()/CLHEP::mm;};
-    void SetmuEndPosition (G4ThreeVector pos) {muEndPosX=pos.x()/CLHEP::mm; muEndPosY=pos.y()/pos.y(); muEndPosZ=pos.z();}
     void SetEventWeight  (G4double w) {weight *= w;}
     void SetDetectorInfo (G4int nDetectors, G4int ID, G4int particleID, G4double edep,
                           G4double edep_el, G4double edep_pos,
@@ -128,6 +127,9 @@ public:
     void SetPolInM2(G4ThreeVector pol) {muM2PolX=pol.x(); muM2PolY=pol.y(); muM2PolZ=pol.z();}
     void SetTimeInM2(G4double time) {muM2Time = time/CLHEP::microsecond;}
     void SetInitialPositronMomentum(G4ThreeVector mom) {posIniMomx=mom.x();  posIniMomy=mom.y(); posIniMomz=mom.z();}
+    void SetPositronEndPosition(G4ThreeVector pos) {
+        posEndPosX=pos.x()/CLHEP::mm; posEndPosY=pos.y()/CLHEP::mm; posEndPosZ=pos.z()/CLHEP::mm;
+    }
     void SetInitialElectronMomentum(G4ThreeVector mom) {elIniMomx=mom.x();  elIniMomy=mom.y(); elIniMomz=mom.z();}
     void SetNOptPhot(G4int value) {nOptPhot=value;}
     void SetPhotDetTime(G4double time);
@@ -195,6 +197,9 @@ public:
     static G4bool store_posIniMomX;
     static G4bool store_posIniMomY;
     static G4bool store_posIniMomZ;
+    static G4bool store_posEndPosX;
+    static G4bool store_posEndPosY;
+    static G4bool store_posEndPosZ;
     static G4bool store_elIniMomX;
     static G4bool store_elIniMomY;
     static G4bool store_elIniMomZ;
@@ -302,11 +307,10 @@ private:
     Double_t muM1Time, muM1PolX, muM1PolY, muM1PolZ;
     Double_t muM2Time, muM2PolX, muM2PolY, muM2PolZ;
     Double_t muDecayPosX, muDecayPosY, muDecayPosZ;
-    Double_t muEndPosX, muEndPosY, muEndPosZ;
     Double_t muDecayTime;
     Double_t posIniMomx, posIniMomy, posIniMomz;
     Double_t elIniMomx, elIniMomy, elIniMomz;
-    Double_t posEndPosX, posEndPosY, posEndPosZ;        // Decay position ending position (M. Lyu)
+    Double_t posEndPosX, posEndPosY, posEndPosZ;
     Int_t    nOptPhot, nOptPhotDet;
     static const Int_t maxNOptPhotDet=10000;
     Double_t phot_time[maxNOptPhotDet];

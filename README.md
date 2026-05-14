@@ -227,3 +227,13 @@ You can turn on/off this process by adding following line in `.mac` file:
 # This process is set to occur only when mu- is at rest
 /musr/command process addProcess mu- G4MuonMinusCapture
 ```
+
+### 2024-2-10 (ML)
+
+Add stopping position information for the first positron decayed from mu+.\
+Branch name: `posEndPosX(/Y/Z)`
+
+You can turn it off by adding following command in `.mac` file:
+```
+/musr/command rootOutput <branch_name> off
+```

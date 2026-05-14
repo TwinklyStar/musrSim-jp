@@ -52,6 +52,7 @@ musrSteppingAction::musrSteppingAction()  {
   boolIsVvvInfoRequested = false;
   boolMuonEventReweighting = false;
   boolCalculateFieldIntegral = false;
+  decayPositronTrackID = -1;
   myRootOutput = musrRootOutput::GetRootInstance();
   if (myRootOutput == NULL) {
     musrErrorMessage::GetInstance()->musrError(FATAL,
@@ -78,6 +79,7 @@ void musrSteppingAction::DoAtTheBeginningOfEvent() {
   muAlreadyWasInM0InThisEvent=false;
   muAlreadyWasInM1InThisEvent=false;
   muAlreadyWasInM2InThisEvent=false;
+  decayPositronTrackID = -1;
   myOldTracksMap.clear();
   indexOfOldTrack = -1;
   realTimeWhenThisEventStarted=time(0);
@@ -91,8 +93,9 @@ void musrSteppingAction::UserSteppingAction(const G4Step* aStep)  {
   G4Track* aTrack = aStep->GetTrack();
 
   // kill the track, if required by user:
+  G4String p_name = "";
   if (aTrack->GetDefinition()) {
-    G4String p_name = aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName();
+    p_name = aTrack->GetDynamicParticle()->GetDefinition()->GetParticleName();
     if      ((musrParameters::killAllPositrons)&&(p_name == "e+")) {aTrack->SetTrackStatus(fStopAndKill); return;}   // suspend the track
     else if ((musrParameters::killAllElectrons)&&(p_name == "e-")) {aTrack->SetTrackStatus(fStopAndKill); return;}
     else if ((musrParameters::killAllGammas)&&(p_name == "gamma")) {aTrack->SetTrackStatus(fStopAndKill); return;}
@@ -378,6 +381,7 @@ void musrSteppingAction::UserSteppingAction(const G4Step* aStep)  {
 	  G4int n_secondaries= (*secondary).size();
 	  for (G4int i=0; i<n_secondaries; i++) {
 	    if ( ((*secondary)[i]->GetDefinition()->GetParticleName()) == "e+" ) {
+	      decayPositronTrackID = (*secondary)[i]->GetTrackID();
 	      myRootOutput->SetInitialPositronMomentum((*secondary)[i]->GetMomentum());
 	    }
         else if ( ((*secondary)[i]->GetDefinition()->GetParticleName()) == "e-" ) {
@@ -396,6 +400,14 @@ void musrSteppingAction::UserSteppingAction(const G4Step* aStep)  {
       if((actualVolume(0,10)=="log_shield")||(actualVolume(0,10)=="log_Shield")) {
 	aTrack->SetTrackStatus(fStopAndKill);   // suspend the track
       }
+    }
+
+    if ((p_name == "e+") &&
+        (aTrack->GetTrackID() == decayPositronTrackID) &&
+        ((aTrack->GetTrackStatus() == fStopAndKill) ||
+         (aTrack->GetTrackStatus() == fKillTrackAndSecondaries) ||
+         (aTrack->GetTrackStatus() == fStopButAlive))) {
+      myRootOutput->SetPositronEndPosition(postStepPosition);
     }
   }
 }

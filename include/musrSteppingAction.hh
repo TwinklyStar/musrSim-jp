@@ -71,6 +71,7 @@ class musrSteppingAction : public G4UserSteppingAction
     G4String lastActualVolume;
     G4bool boolMuonEventReweighting;
     G4bool boolCalculateFieldIntegral;
+    G4int decayPositronTrackID;
     std::map<G4String,G4int>  volumeMuonWeightMapping;
 
     G4int         indexOfOldTrack;
