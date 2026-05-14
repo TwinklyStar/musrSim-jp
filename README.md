@@ -124,7 +124,10 @@ Fix bugs about abnormal larger kinetic energy
 
 
 ### 2022-4-30 (ML)
-Add branch recording the ID of Parent Track: `det_VrtxPrtTrackID`
+Add branch recording the parent track ID for particles recorded in detector hit
+arrays: `det_VrtxPrtTrackID`. This is a Geant4 track ID, not a particle PDG ID.
+It is aligned with the `det_*` arrays and is filled from the parent track ID of
+the detector hit.
 
 You can turn it off by adding following command in `.mac` file:
 ```
@@ -248,4 +251,15 @@ such as `5.00/00` and dot-style versions such as `6.30.06` can be handled.
 Add parent track ID output for particles recorded by special save volumes. When
 a particle first enters a configured save volume, the ROOT tree now stores its
 Geant4 parent track ID in `save_PrtTrackID`, aligned with the existing `save_*`
-arrays.
+arrays. This complements `det_VrtxPrtTrackID`: `det_VrtxPrtTrackID` is for
+normal detector-hit rows, while `save_PrtTrackID` is for special save-volume
+rows.
+
+The `det_VrtxPrtTrackID` branch has the usual `rootOutput` on/off control:
+```
+/musr/command rootOutput det_VrtxPrtTrackID off
+```
+
+There is no separate `rootOutput` on/off switch for `save_PrtTrackID` at this
+time. The `save_*` branches, including `save_PrtTrackID`, are created together
+when at least one special save volume is configured.
