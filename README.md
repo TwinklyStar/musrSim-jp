@@ -230,10 +230,22 @@ You can turn on/off this process by adding following line in `.mac` file:
 
 ### 2024-2-10 (ML)
 
-Add stopping position information for the first positron decayed from mu+.\
-Branch name: `posEndPosX(/Y/Z)`
+Add stopping position information for the first positron decayed from mu+. The
+code stores the track ID of the positron produced by `DecayWithSpin`, then saves
+that same positron's final position when the track stops or is killed.\
+Branch name: `posEndPosX(/Y/Z)`; unit is mm.
 
 You can turn it off by adding following command in `.mac` file:
 ```
 /musr/command rootOutput <branch_name> off
 ```
+
+### 2026-5-14 (ML)
+
+Update `FindROOT.cmake` ROOT version parsing so both old slash-style versions
+such as `5.00/00` and dot-style versions such as `6.30.06` can be handled.
+
+Add parent track ID output for particles recorded by special save volumes. When
+a particle first enters a configured save volume, the ROOT tree now stores its
+Geant4 parent track ID in `save_PrtTrackID`, aligned with the existing `save_*`
+arrays.
